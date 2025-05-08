@@ -9,7 +9,7 @@ import re
 def print_stats(total_size, status_codes):
     """
     Print statistics including total file size and count of each status code.
-    
+
     Args:
         total_size (int): Total file size.
         status_codes (dict): Dictionary containing counts of status codes.
@@ -31,34 +31,34 @@ def main():
         '403': 0, '404': 0, '405': 0, '500': 0
     }
     line_count = 0
-    
+
     # Regular expression to match the expected log format
     pattern = r'(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 HTTP/1.1" (\d+) (\d+)'
-    
+
     try:
         for line in sys.stdin:
             line = line.strip()
             match = re.match(pattern, line)
-            
+
             if match:
                 # Extract status code and file size from the matched line
                 status_code = match.group(3)
                 file_size = int(match.group(4))
-                
+
                 # Update total file size
                 total_size += file_size
-                
+
                 # Update status code count if it's one we're tracking
                 if status_code in status_codes:
                     status_codes[status_code] += 1
-            
+
             # Increment line count
             line_count += 1
-            
+
             # Print statistics after every 10 lines
             if line_count % 10 == 0:
                 print_stats(total_size, status_codes)
-    
+
     except KeyboardInterrupt:
         # Handle keyboard interruption (CTRL + C)
         pass
