@@ -33,7 +33,8 @@ def main():
     line_count = 0
 
     # Regular expression to match the expected log format
-    pattern = r'(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 HTTP/1.1" (\d+) (\d+)'
+    pattern = r'(\d+\.\d+\.\d+\.\d+) - \[(.*?)\]
+    "GET /projects/260 HTTP/1.1" (\d+) (\d+)'
 
     try:
         for line in sys.stdin:
