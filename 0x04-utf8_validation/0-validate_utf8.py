@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 UTF-8 Validation Module
-This module contains a function to validate if a data set represents a valid UTF-8 encoding.
+This module contains a function to validate if a data set represents a valid
+UTF-8 encoding.
 """
 
 
@@ -16,8 +17,8 @@ def validUTF8(data):
     - 4-byte character: 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
 
     Args:
-        data (list): A list of integers where each integer represents 1 byte of data.
-                     Only the 8 least significant bits are considered.
+        data (list): A list of integers where each integer represents 1 byte
+                     of data. Only the 8 least significant bits are considered.
 
     Returns:
         bool: True if data is a valid UTF-8 encoding, else False.
