@@ -24,7 +24,7 @@ function makeRequest (url) {
 async function main () {
   try {
     const film = await makeRequest(`https://swapi-api.alx-tools.com/api/films/${movieId}/`);
-    
+
     for (const url of film.characters) {
       const character = await makeRequest(url);
       console.log(character.name);
