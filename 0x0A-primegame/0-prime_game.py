@@ -112,7 +112,7 @@ if __name__ == "__main__":
     print("\nTracing first example:")
     print("Round 1 (n=4): Primes are [2, 3] -> 2 primes (even) -> Ben wins")
     print(
-    "Round 2 (n=5): Primes are [2, 3, 5] -> "
+        "Round 2 (n=5): Primes are [2, 3, 5] -> "
         "3 primes (odd) -> Maria wins")
     print("Round 3 (n=1): No primes -> 0 primes (even) -> Ben wins")
     print("Ben wins 2 rounds, Maria wins 1 round -> Ben is overall winner")
